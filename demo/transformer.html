@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>parser</title>
+</head>
+<style>
+  td {
+    padding: 0 20px;
+  }
+</style>
+<body>
+<ul>
+  <li><a href="tokenizer.html">词法分析器</a></li>
+  <li><a href="parser.html">语法分析器</a></li>
+  <li><a href="transformer.html">AST转换器</a></li>
+</ul>
+<table border="1px solid #ccc">
+  <tr>
+    <td><pre id="parser"></pre></td>
+    <td>=></td>
+    <td><pre id="transformer"></pre></td>
+  </tr>
+</table>
+<script src="../src/tokenizer.js"></script>
+<script src="../src/parser.js"></script>
+<script src="../src/traverser.js"></script>
+<script src="../src/transformer.js"></script>
+<script>
+const str = '(add 2 (subtract 4 2))';
+const tokens = tokenizer(str);
+const ast = parser(tokens);
+const astJSON = JSON.stringify(ast, null, 2);
+document.getElementById('parser').innerHTML = astJSON;
+const targetAST = transformer(ast);
+const targetASTJSON = JSON.stringify(targetAST, null, 2);
+document.getElementById('transformer').innerHTML = targetASTJSON;
+</script>
+</body>
+</html>

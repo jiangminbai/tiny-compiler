@@ -1,0 +1,26 @@
+{
+  "name": "tiny-compiler",
+  "version": "1.0.0",
+  "description": "a tiny compiler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jan-wong/tiny-compiler.git"
+  },
+  "keywords": [
+    "compiler",
+    "javascript"
+  ],
+  "author": "wolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jan-wong/tiny-compiler/issues"
+  },
+  "homepage": "https://github.com/jan-wong/tiny-compiler#readme",
+  "devDependencies": {
+    "esprima": "^4.0.0"
+  }
+}
